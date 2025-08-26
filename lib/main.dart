@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
-import 'screens/auth/login_screen.dart';
+import 'routes/app_routes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginScreen(), theme: ThemeData.dark());
+    return MaterialApp(
+      title: 'Ovion App',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/login', // Esta es la pantalla inicial
+      onGenerateRoute: AppRoutes.generateRoute, // Usa tu sistema de rutas
+    );
   }
 }

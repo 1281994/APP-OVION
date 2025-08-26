@@ -347,7 +347,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               WidgetSpan(
                                 child: GestureDetector(
                                   onTap: () {
-                                    Navigator.pushNamed(context, '/registro');
+                                    Navigator.pushNamed(context, '/sign-up');
                                   },
                                   child: Text(
                                     'Sign up now',
